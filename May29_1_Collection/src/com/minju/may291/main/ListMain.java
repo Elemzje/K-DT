@@ -1,6 +1,7 @@
 package com.minju.may291.main;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 // ArrayList
 //	요소를 인덱스로 사용하는 것이 배열과 유사
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 //		클래스명<자료형의 객체형> 값을 넣으면 됨!
 
 public class ListMain {
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) {
 		ArrayList test = new ArrayList();
 		test.add("수요일");
@@ -44,7 +46,77 @@ public class ListMain {
 			System.out.println(al2.get(i));
 		}
 		System.out.println("------------------");
+		al2.add(30);
+		al2.add(1,90); // 1번 자리에 90 넣기
+		al2.set(2, 0); // 2번 자리를 0으로 바꾸기
+		al2.remove(0); // 0번 자리에 있는 값 지우기
 		
+		for (Integer ii : al2) {
+			System.out.println(ii);
+		}
+		System.out.println("------------------");
+		al.add("수박");
+		al.add("귤");
+		al.add("사과");
+		al.add("감");
+		al.add("포도");
+		al2.add(84);
+		al2.add(2173);
+		al2.add(300);
+		al2.add(35);
+		System.out.println(al2);
+		System.out.println("------------------");
 		
+		// 정렬 기능
+		Comparator<String> c = new Comparator<String>() {
+
+			@Override
+			public int compare(String o1, String o2) {
+				return o1.compareTo(o2); // 오름차순 정렬
+//				return o2.compareTo(o1); // 내림차순 정렬
+			}
+		};
+		al.sort(c);
+		
+		for (String string : al) {
+			System.out.println(string);
+		}
+		System.out.println("------------------");
+		
+		Comparator<Integer> c2 = new Comparator<Integer>() {
+
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				return o2.compareTo(o1);
+			}
+		};
+		al2.sort(c2);
+		System.out.println(al2);
+		System.out.println("------------------");
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
