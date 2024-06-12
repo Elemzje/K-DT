@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.guestBook {
+	width: 700px;
+	border: black solid 4px;
+	border-radius: 10px;
+	box-shadow: maroon 0px 0px 20px inset;
+	font-size: 15pt;
+}
+
+.imgTd {
+	width: 150px;
+	padding: 10px;
+}
+
+.guestBook img {
+	max-width: 150px;
+	border: red solid 3px;
+	border-radius: 30px;
+}
+
+.textTd {
+	overflow: hidden;		/* max-width를 벗어나는 내용을 숨길 때 */
+	white-space: nowrap;	/* 벗어나는 내용과 상관없이 한 줄로 표시 */
+	text-overflow: ellipsis;/* 이 속성을 추가하면 끝에 잘리는 부분을 ... 으로 처리 */
+	max-width: 500px;
+}
+
+textarea {
+	background-color: transparent;
+	border: none; 
+	font-family: "goodthink";
+	font-size: 15pt;
+	resize: none;
+}
+
+textarea:focus {
+	outline: none;
+}
