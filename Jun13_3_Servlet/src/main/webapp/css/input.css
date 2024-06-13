@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "time";
+	src: url("time.ttf");
+}
+
+#regHobbyField {
+	width: 200px;
+	height: 120px;
+}
+
+#whole {
+	font-family: "time";
+	border: black solid 5px;
+	border-radius: 20px;
+	padding: 30px;
+	background-color: #00FFFF50;
+	font-size: large;
+	font-weight: 100;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+}
+
+h1 {
+	text-align: center;
+}
+
+input.textType {
+	width:140px;
+	margin-bottom: auto;
+	outline: none;
+	text-align: center;
+	border: red solid 1px;
+	border-radius: 5px;
+	background-color: transparent;
+	font-family: time;
+	font-weight: 100;
+	font-size: 8pt;
+}
+
+input.textType:hover {
+	background-color: #999999;
+	border-style: double;
+}
+
+input.textType:focus {
+	border-bottom: black dotted 1px;
+}
+
+input.textType::placeholder {
+	color: blue;
+}
+
+select {
+	border: none;
+	background-color: transparent;
+	font-size: 10pt;
+	font-family: time;
+	outline: none;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+select option {
+	background-color: lightblue;
+	color: #000;
+	padding: 3px 0;
+}
+
+textarea {
+	background-color: white;
+	border: black solid 2px; 
+	border-radius: 10px;
+	resize: none;
+	font-family: time;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+textarea::-webkit-scrollbar {
+	display: none;	
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	color: black;
+	font-size: 15pt;
+	font-family: time;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button:hover {
+	text-decoration: underline;
+	color: white;
+}

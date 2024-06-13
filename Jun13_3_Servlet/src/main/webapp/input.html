@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="css/input.css">
+</head>
+<body>
+	<!-- 
+		<< 회원가입 페이지 >>
+		ID
+		PW
+		성별
+		지역
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		취미 (복수 선택 가능)
+		자기소개 (textarea) + CSS까지 이쁘게
+		가입버튼 누르면 => 입력한 정보들이 새로운 페이지에 뜨게 (Servlet)
+	-->
+	<table>
+	<tr>
+	<td id="whole">
+	<h1>Register</h1>
+	<hr>
+	<form action="Output" method="post">
+		<table>
+		<tr><td>ID</td><td>:</td><td><input class="textType" name="id" placeholder="필수, 4 ~ 8자" required="required" autofocus="autofocus" autocomplete="off"></td><tr>
+		<tr><td>PW</td><td>:</td><td><input class="textType" type="password" name="pw" required="required" autocomplete="off" placeholder="필수, 영문/숫자혼합"></td></tr>
+		</table>
+		<hr>
+		Man <input class="check" checked="checked" type="radio" name="gender" value="male"> 
+		Woman <input class="check" type="radio" name="gender" value="female">
+		Others <input class="check" type="radio" name="gender" value="others"> <hr>
+		Location
+		<select name="location">
+			<option disabled selected="selected">지역</option>
+			<option>서울</option>
+			<option>경기</option>
+			<option>인천</option>
+			<option>강원</option>
+			<option>충북</option>
+			<option>충남</option>
+			<option>전북</option>
+			<option>전남</option>
+			<option>경북</option>
+			<option>경남</option>
+			<option>제주</option>
+		</select><hr>
+		<fieldset id="regHobbyField">
+			<legend>취미 (중복선택 가능)</legend>
+			여행 <input class="check" type="checkbox" name="hobby" value="여행"> 
+			음악 <input class="check" type="checkbox" name="hobby" value="음악">
+			게임 <input class="check" type="checkbox" name="hobby" value="게임"> <br>
+			산책 <input class="check" type="checkbox" name="hobby" value="산책">
+			다도 <input class="check" type="checkbox" name="hobby" value="다도">
+			화훼 <input class="check" type="checkbox" name="hobby" value="화훼"> <br>
+			독서 <input class="check" type="checkbox" name="hobby" value="독서">
+			운동 <input class="check" type="checkbox" name="hobby" value="운동">
+			영화 <input class="check" type="checkbox" name="hobby" value="영화"><br>
+			기타 <input class="textType" maxlength="10" type="text" name="hobby">
+		</fieldset><hr>
+		자기소개 (500자 이내)<br>
+		<textarea rows="10" cols="50" maxlength="500" name="introduce"></textarea>
+		<hr>
+		<div><button>가입</button></div>
+	</form>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>
