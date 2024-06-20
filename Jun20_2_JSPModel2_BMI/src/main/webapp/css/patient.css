@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "time";
+	src: url("time.ttf");
+}
+
+body {
+	font-family: 'time';
+	background-image: url("plant.jpg");
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+#patTbl {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	background-color: #ff999930;
+	width: 700px;
+	height: 700px;
+	border: white solid 5px;
+	border-radius: 10px;
+}
+
+#patTbl th {
+	font-size: 30pt;
+	color: teal;
+	text-shadow: white 3px 5px 5px;
+}
+
+#patTbl td {
+	width: 50%;
+	font-size: 20pt;
+	text-align: center;
+	color: teal;
+	text-shadow: white 3px 5px 5px;
+}
+
+#patTbl .textType {
+	margin-bottom: auto;
+	outline: none;
+	text-align: center;
+	border: white solid 3px;
+	border-radius: 5px;
+	background-color: transparent;
+	font-size: 15pt;
+}
+
+#patTbl .textType::focus {
+	font-size: 15pt;
+	font-family: "time";
+}
+
+#patTbl .textType::placeholder {
+	font-family: "time";
+	color:teal;
+}
+
+#patTbl .photoType {
+	margin-left: auto;
+	margin-right: auto;
+	color: teal;
+	font-size: 20pt;
+	font-family: "time";
+	font-size: 15px;
+	width: 230px;
+}
+
+#patTbl button {
+	background-color: transparent;
+	border: white;
+	font-family: "time";
+	color: teal;
+	font-size:20pt;
+	text-shadow: white 3px 5px 5px;
+	cursor: pointer;
+}
+
+#patTble button:hover {
+	text-decoration: underline;
+	font-family: "time";
+	font-size:20pt;
+	color: black;
+}
+
+input[type=file]::file-selector-button {
+	border: white solid 5px;
+	border-radius: 10px;
+	font-family: "time";
+	font-size: 20pt;
+	background-color: transparent;
+	cursor: pointer;
+	color: teal;
+}
+
+input[type=file]::file-selector-button:hover {
+	background-color: black;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+

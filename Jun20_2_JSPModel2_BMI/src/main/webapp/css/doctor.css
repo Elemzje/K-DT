@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "time";
+	src: url("time.tff");
+}
+
+body {
+	background-image: url("plant.jpg");
+	margin-left: 0px;
+	font-family: "time";
+	margin-top: 0px;
+}
+
+#docTbl {
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ff999930;
+	width: 500px;
+	height: 500px;
+	border: white solid 5px;
+	border-radius: 10px;
+}
+
+.tdHeader {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25pt;
+	color: white;
+	text-shadow: teal 3px 5px 5px;
+}

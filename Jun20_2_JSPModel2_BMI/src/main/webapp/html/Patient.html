@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/MinjuValidChecker.js"></script>
+<script type="text/javascript" src="js/patientCheck.js"></script>
+<link rel="stylesheet" href="css/patient.css">
+</head>
+<body>
+	<form action="HomeController" method="post" onsubmit="return check();" enctype="multipart/form-data" name="pf">
+	<table id="patTbl">
+		<tr>
+			<th colspan="2" id="tblHeader">BMI 검사</th>
+		</tr>
+		<tr>
+			<td align="center" class="td1">
+				이름 : 
+			</td>
+			<td align="center">
+				<input name="name" autofocus="autofocus" class="textType" maxlength="10">
+			</td>
+		</tr>
+		<tr>
+			<td align="center" class="td1">
+				키 : 
+			</td>
+			<td align="center">
+				<input name="height" class="textType" placeholder="cm"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" class="td1">
+				몸무게 : 
+			</td>
+			<td align="center">
+				<input name="weight" class="textType" placeholder="kg"><p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" class="td1">
+				사진 업로드 
+			</td>
+			<td align="center">
+				<input name="photo" class="photoType" type="file"><p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button>제출</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
