@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'old2';
+	src: url("css/old.ttf");
+}
+
+body {
+	background-color: lightgreen;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	font-family: "old2";
+	font-weight: 200;
+	border: teal solid 10px;
+	border-radius: 10px;
+}
+
+th {
+	color: #034f83;
+	background-color: #e9ffe0;
+	font-family: "old2";
+	font-size: 40pt;
+	font-weight: 300;
+}
+
+
+.td1 {
+	border-radius: 10px;
+	color: #934f83;
+	background-color: #e9ffe0;
+	font-size: 15pt;
+	font-weight: 500;
+}
+
+img {
+	border: pink solid 3px;
+	border-radius: 20px;
+}
+
+button {
+	font-family: "old2";
+	font-size: 20pt;
+	background-color: transparent;
+	color: #034f83;
+	border: none;
+}
+
+button:hover {
+	text-decoration: underline;
+	background-color: black;
+	color: aliceblue;
+	border-radius: 50px;
+}

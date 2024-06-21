@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function restart() {
+		document.location("HomeController/");
+	}
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th colspan="3">가위바위보 게임</th>
+		</tr>
+		<tr> 
+			<td>
+				<a href=""><img src="rock.jfif"></a>
+			</td>
+			<td>
+				<a href=""><img src="paper.png"></a>
+			</td>
+			<td>
+				<a href=""><img src="scissor.png"></a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" class="td2">유저(↓)</td>
+			<td align="center" class="td2">승부</td>
+			<td align="center" class="td2">상대(↓)</td>
+		</tr>
+		<tr>
+			<td align="center" class="td1"></td>
+			<td align="center" class="td1"></td>
+			<td align="center" class="td1"></td>
+		</tr>
+		<tr>
+			<td colspan="3"><div>판정:</div>전적 승 무 패</td>
+		</tr>
+		<tr>
+			<td colspan="3"><form action="HomeController">
+				<button onclick="restart();">다시하기</button>
+			</form></td>
+		</tr>
+	
+	</table>
+</body>
+</html>
