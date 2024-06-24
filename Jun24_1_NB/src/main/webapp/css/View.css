@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "scene";
+	src: url("scene.ttf");
+}
+
+body {
+	font-family: "scene";
+	font-size: 20pt;
+	font-weight: 300;
+	background-color: skyblue;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	width : 700px;
+	background-color: pink;
+	border: white 4px solid;
+	border-radius: 10px;
+}
+
+th {
+	font-size: 40pt;
+	color: teal;
+}
+
+tr {
+	margin-bottom: 30px;
+}
+
+input {
+	font-family: "scene";
+	font-size: 20pt;
+	background-color: transparent;
+	color: teal;
+	border: none;
+	text-align: center;
+	caret-color: transparent; 
+	cursor: pointer;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	font-family: "scene";
+	color: teal; 
+	font-size: 20pt;
+}
+
+button:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+.text:hover {
+	cursor: default;
+}

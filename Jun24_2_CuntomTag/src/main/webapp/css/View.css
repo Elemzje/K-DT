@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "scene";
+	src: url("scene.ttf");
+}
+
+body {
+	font-family: "scene";
+	font-size: 30pt;
+	background-color: skyblue;
+	color: teal;
+}
+
+table {
+	border: white 3px solid;
+	border-radius: 15px;
+	background-color: pink;
+	box-shadow: white 0px 0px 3px; 
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: teal;
+	background-color: beige;
+	border-radius: 3px;
+	width: 100%;
+}
+
+td {
+	width: 100px;
+	text-align: center;
+	width: 100px;
+}
