@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#calctbl table {
+	width: 50%;
+}
+
+#calctbl input {
+	background-color: transparent;
+	outline: none;
+	font-family: "scene";
+	font-size: 20pt;
+	color: teal;
+	border-color: transparent;
+	text-align: center;
+}
+
+#calctbl input:hover {
+	cursor: pointer;
+}
