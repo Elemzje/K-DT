@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#appleTbl {
+	margin-left: auto;
+	margin-right: auto;
+	border: pink double 3px;
+	border-radius: 5px;
+}
+
+#appleBoard {
+	width: 400px;
+}
+
+#appleContext th {
+	background-color: pink;
+}
+
+#appleContext td {
+	border: pink solid 3px;
+}
+
+.dataTr:hover {
+	background-color: black;
+}
+
+#appleResult {
+	border-color: transparent;	
+}
