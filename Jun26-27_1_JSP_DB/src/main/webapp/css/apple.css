@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#appleTbl {
+	margin-left: auto;
+	margin-right: auto;
+	border: pink double 3px;
+	border-radius: 5px;
+}
+
+#appleBoard {
+	width: 400px;
+}
+
+#appleContext th {
+	background-color: pink;
+}
+
+#appleContext td {
+	width: 500px;
+	text-align: center;
+	border: pink solid 3px;
+}
+
+.dataTr:hover {
+	background-color: black;
+}
+
+#appleResult {
+	border-color: transparent;	
+}
+
+#pageTd a {
+	font-size: 30pt;
+}
+
+#detailTbl input {
+	font-family: "scene";
+	font-size: 40pt;
+	background-color: transparent;
+	outline: none;
+	color: white;
+	border: pink solid 3px;
+}
+
+#detailTbl tr {
+	border: pink solid 3px;
+	border-radius: 5px;
+}
+
+#detailTbl td {
+	text-align: center;
+}
+
+#detailTbl textarea {
+	background-color: transparent;
+	font-family: "scene";
+	outline: none;
+	color: white;
+	font-size: 25pt;
+	border: pink solid 3px;
+	resize: none;
+}
+
+
+#detailTbl button {
+	font-family: "scene";
+	font-size: 40pt;
+	background-color: transparent;
+	outline: none;
+	color: white;
+	border: pink solid 3px;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "scene";
+	src: url("scene.ttf");
+}
+
+body {
+	font-family: "scene";
+	font-size: 40pt;
+	font-weight: 300;
+	text-align: center;
+	color: white;
+	background-color: teal;
+}
+
+table {
+	border: pink solid 4px;
+}
