@@ -15,10 +15,10 @@
 			</th>
 		</tr>			
 		<tr>
-			<td><input name="id" value="${cookie.lastLoginId.value }" placeholder="ID"></td>
+			<td><input name="id" spellcheck="false" value="${cookie.lastLoginId.value }" placeholder="ID"></td>
 		</tr>			
 		<tr>
-			<td><input name="pw" type="password" placeholder="Password"></td>
+			<td><input name="pw" spellcheck="false" type="password" placeholder="Password"></td>
 		</tr>
 		<tr>
 			<td><button>Login</button>&nbsp;&nbsp;&nbsp;<a href="RegiController">Sign Up</a></td>

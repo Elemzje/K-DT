@@ -8,3 +8,7 @@ function logOut() {
 function goInfo() {
 	location.href = "InfoController";
 }
+
+function deleteInfo() {
+	location.href = "InfoDeleteController";
+}

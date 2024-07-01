@@ -8,9 +8,9 @@
 </head>
 <body>
 	<form action="RegiController" name="regForm" method="post" enctype="multipart/form-data" onsubmit="return regCheck();">
-	<table>
+	<table id="regiTbl">
 		<tr>
-			<td colspan="2"><h1>회원가입</h1></td>
+			<th colspan="2"><h1>회원가입</h1></th>
 		</tr>
 		<tr>
 			<td>ID </td>
@@ -43,10 +43,14 @@
 		</tr>
 		<tr>
 			<td>Image </td>
-			<td><input type="file" autocomplete="off" name="image"></td>
+			<td>
+				<label for="imageFile">업로드</label>
+				<input id="imageFile" style="display: none;" type="file" autocomplete="off" name="image">
+			</td>
 		</tr>
 		<tr>
-			<td colspan="2"><button>회원 가입</button><div onclick="history.back();">취소</div></td>
+			<td align="right"><button>회원 가입</button></td>
+			<td><span onclick="history.back();">취소</span></td>
 		</tr>
 	</table>
 	</form>

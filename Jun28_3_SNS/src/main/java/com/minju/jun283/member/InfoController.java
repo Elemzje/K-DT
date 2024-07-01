@@ -8,24 +8,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import oracle.net.aso.m;
+
 @WebServlet("/InfoController")
 public class InfoController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if (MemberDAO.getMemberDAO().loginCheck(request)) {
 			request.getSession().getAttribute("m");
 			request.setAttribute("contentPage", "member/userInfo.jsp");
-			request.setAttribute("loginPage", "member/loginInfo.jsp");
 		} else {
-			request.setAttribute("loginPage", "member/userInfo.jsp");
 			request.setAttribute("contentPage", "home.jsp");
 		}
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		request.setAttribute("contentPage", "member/result.jsp");
-		request.setAttribute("loginPage", "member/login.jsp");
+		if (MemberDAO.getMemberDAO().loginCheck(request)) {
+			MemberDAO.getMemberDAO().update(request);
+			MemberDAO.getMemberDAO().getInfo(request);
+			request.setAttribute("contentPage", "member/result.jsp");
+		} else {
+			request.setAttribute("r", "부정한 방법으로 접근했습니다");
+			request.setAttribute("contentPage", "member/result.jsp");
+		}
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }

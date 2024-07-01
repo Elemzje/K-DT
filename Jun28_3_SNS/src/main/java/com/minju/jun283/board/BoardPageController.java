@@ -1,4 +1,4 @@
-package com.minju.jun283.main;
+package com.minju.jun283.board;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,23 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.minju.jun283.board.BoardDAO;
+import com.minju.jun283.main.TokenManager;
 import com.minju.jun283.member.MemberDAO;
 
-@WebServlet("/HomeController")
-public class HomeController extends HttpServlet {
-	public HomeController() {
-		BoardDAO.getBoardDAO().countBoard();
-	}
-	
+@WebServlet("/BoardPageController")
+public class BoardPageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if (MemberDAO.getMemberDAO().loginCheck(request)) {
-			request.setAttribute("contentPage", "home.jsp");
-			request.setAttribute("loginPage",  "member/loginInfo.jsp");
-		} else {
-			request.setAttribute("contentPage", "home.jsp");
-			request.setAttribute("loginPage", "member/login.jsp");
-		}
+		MemberDAO.getMemberDAO().loginCheck(request);
+		int pageNum = Integer.parseInt(request.getParameter("page"));
+		TokenManager.make(request);
+		BoardDAO.getBoardDAO().getPage(pageNum, request);
+		request.setAttribute("contentPage", "board/board.jsp");
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 

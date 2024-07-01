@@ -9,14 +9,14 @@
 <body>
 	<table>
 		<tr>
-			<td rowspan="2"><img src="img/${sessionScope.m.m_img }"></td>
+			<td rowspan="2" valign="middle"><img src="img/${sessionScope.m.m_img }"></td>
 			<td>${sessionScope.m.m_id }</td>
 		</tr>
 		<tr>
 			<td>${sessionScope.m.m_name }님</td>
 		</tr>
 		<tr>
-			<td>어서오세요</td>
+			<td colspan="2">어서오세요</td>
 		</tr>
 		<tr>
 			<td>

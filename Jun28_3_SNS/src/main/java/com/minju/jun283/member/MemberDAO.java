@@ -28,7 +28,12 @@ public class MemberDAO {
 	
 	public boolean loginCheck(HttpServletRequest req) {
 		Member m = (Member) req.getSession().getAttribute("m");
-		return (m != null);
+		if (m != null) {
+			req.setAttribute("loginPage", "member/loginInfo.jsp");
+			return true;
+		}
+		req.setAttribute("loginPage", "member/login.jsp");
+		return false;
 	}
 	
 	public void register(HttpServletRequest req) {
@@ -99,7 +104,7 @@ public class MemberDAO {
 			if (pw.equals(m_pw)) {
 				Member m = new Member(m_id, m_pw, m_name, m_phone_no, m_birthday, m_img);
 				req.getSession().setAttribute("m", m);
-				req.getSession().setMaxInactiveInterval(6000);
+				req.getSession().setMaxInactiveInterval(60 * 60 * 24 * 5);
 			}
 			
 			Cookie c = new Cookie("lastLoginId", id);
@@ -128,6 +133,12 @@ public class MemberDAO {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			Date m_birthday = sdf.parse(mr.getParameter("birthday"));
 			String m_img = mr.getFilesystemName("img");
+			if (m_img == null) {
+				Member m = (Member) req.getSession().getAttribute("m");
+				m_img = m.getM_img();
+			}
+			m_img = URLEncoder.encode(m_img, "UTF-8");
+			m_img = m_img.replace("+", " ");
 			String m_id = mr.getParameter("id");
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, m_pw);
@@ -136,8 +147,69 @@ public class MemberDAO {
 			pstmt.setDate(4, new java.sql.Date(m_birthday.getTime()));
 			pstmt.setString(5, m_img);
 			pstmt.setString(6, m_id);
+			
+			if (pstmt.executeUpdate() == 1) {
+				req.setAttribute("r", "[수정 성공]");
+			} else {
+				req.setAttribute("r", "[수정 실패]");
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
+			req.setAttribute("r", "[수정 실패]");
+		} finally {
+			MinjuDBManager.close(con, pstmt, null);
+		}
+	}
+	
+	public void getInfo(HttpServletRequest req) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			req.setCharacterEncoding("UTF-8");
+			con = MinjuDBManager.connect("minjuPool");
+			String sql = "select * from jun28_member where m_id = ?";
+			pstmt = con.prepareStatement(sql);
+			Member m = (Member) req.getSession().getAttribute("m");
+			String m_id = m.getM_id();
+			pstmt.setString(1, m_id);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				m.setM_pw(rs.getString("m_pw"));
+				m.setM_name(rs.getString("m_name"));
+				m.setM_phone_no(rs.getString("m_phone_no"));
+				m.setM_birthday(rs.getDate("m_birthday"));
+				m.setM_img(rs.getString("m_img"));
+			}
+			req.getSession().setAttribute("m", m);
+			MinjuDBManager.close(con, pstmt, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void delete(HttpServletRequest req) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			con = MinjuDBManager.connect("minjuPool");
+			String sql = "delete from jun28_member where m_id = ?";
+			String m_id = ((Member) req.getSession().getAttribute("m")).getM_id();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, m_id);
+			if (pstmt.executeUpdate() == 1) {
+				req.setAttribute("r", "[삭제 성공]");
+			} else {
+				req.setAttribute("r", "[삭제 실패]");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			req.setAttribute("r", "[삭제 실패]");
+		}finally {
+			MinjuDBManager.close(con, pstmt, null);
 		}
 	}
 	

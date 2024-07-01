@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,30 +9,38 @@
 <script type="text/javascript" src="js/MinjuValidChecker.js"></script>
 <script type="text/javascript" src="js/regValidChecker.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/board.js"></script>
 </head>
 <body>
-	<table id="siteMenuTbl">
-		<tr>
-			<td align="center" colspan="2"><a href="HomeController">Title</a></td>
-		</tr>
-		<tr>
-			<td align="center">메뉴1</td>
-			<td align="center">메뉴2</td>
-		</tr>
-	</table>
-	<table id="siteLoginTbl">
-		<tr>
-			<td>
-				<jsp:include page="${loginPage }" />
-			</td>
-		</tr>
-	</table>
-	<table id="siteContentTbl">
-		<tr>
-			<td>
-				<jsp:include page="${contentPage }" />
-			</td>
-		</tr>
+	<table id="whole">
+		<tr><td id="siteMenuTd" colspan="2">
+			<table id="siteMenuTbl">
+				<tr>
+					<th align="center" colspan="2"><a href="HomeController">Title</a></th>
+				</tr>
+				<tr>
+					<td align="center"><a href="BoardController">Board</a></td>
+					<td align="center">메뉴2</td>
+				</tr>
+			</table>
+		</td></tr>
+		<tr><td>
+			<table id="siteLoginTbl">
+				<tr>
+					<td>
+						<jsp:include page="${loginPage }" />
+					</td>
+				</tr>
+			</table>
+		</td><td align="center">
+			<table id="siteContentTbl">
+				<tr>
+					<td>
+						<jsp:include page="${contentPage }" />
+					</td>
+				</tr>
+			</table>
+		</td></tr>
 	</table>
 </body>
 </html>
