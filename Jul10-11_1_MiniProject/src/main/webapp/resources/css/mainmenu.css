@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#siteMainContentTbl {
+	width: 100%;
+}
+
+
+#siteMainContentTbl Td {
+	width: 50%;
+	text-align: center;
+}

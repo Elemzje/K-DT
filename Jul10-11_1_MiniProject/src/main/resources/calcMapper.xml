@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minju.jul103.calculate.CalcMapper">
+	<insert id="insertResult" parameterType="com.minju.jul103.calculate.Result">
+		insert into jul10_result values(jul10_result_seq.nextval, #{r_type}, #{r_calcstr}, sysdate, #{r_user})
+	</insert>
+	<select id="selectAllResult" parameterType="com.minju.jul103.calculate.Result" resultType="com.minju.jul103.calculate.Results">
+		select * from(select rownum as rn, r_no, r_type, r_calcstr, r_when, r_user from (select * from jul10_result where r_user = #{r_user} order by r_when desc))where rn between #{r_start} and #{r_end}
+	</select>
+	<select id="selectUserCount" parameterType="com.minju.jul103.calculate.Result">
+		select count(*) as r_no from jul10_result where r_user = #{r_user}
+	</select>
+</mapper>

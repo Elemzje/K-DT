@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minju.jul103.member.MemberMapper">
+	<insert id="doSignin" parameterType="com.minju.jul103.member.Member">
+		insert into jul10_member values(#{m_id}, #{m_pw}, #{m_affiliation})
+	</insert>
+
+	<select id="pwCheck" parameterType="com.minju.jul103.member.Member" resultType="com.minju.jul103.member.Member">
+		select * from jul10_member where m_id = #{m_id}
+	</select>
+	
+	<update id="updateInfo" parameterType="com.minju.jul103.member.Member">
+		update jul10_member set m_pw = #{m_pw}, m_affiliation = #{m_affiliation} where m_id = #{m_id}
+	</update>
+	
+	<delete id="deleteAccount" parameterType="com.minju.jul103.member.Member">
+		delete from jul10_member where m_id = #{m_id}
+	</delete>
+</mapper>
