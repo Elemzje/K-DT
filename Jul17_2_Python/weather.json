@@ -1,0 +1,48 @@
+{
+	"coord": {
+		"lon": 126.8466,
+		"lat": 37.5421
+	},
+	"weather": [
+		{
+			"id": 501,
+			"main": "Rain",
+			"description": "보통 비",
+			"icon": "10d"
+		}
+	],
+	"base": "stations",
+	"main": {
+		"temp": 25.9,
+		"feels_like": 27.16,
+		"temp_min": 25.83,
+		"temp_max": 26.8,
+		"pressure": 1008,
+		"humidity": 100,
+		"sea_level": 1008,
+		"grnd_level": 1004
+	},
+	"visibility": 5000,
+	"wind": {
+		"speed": 5.14,
+		"deg": 210
+	},
+	"rain": {
+		"1h": 0.33
+	},
+	"clouds": {
+		"all": 100
+	},
+	"dt": 1721194709,
+	"sys": {
+		"type": 1,
+		"id": 8105,
+		"country": "KR",
+		"sunrise": 1721161472,
+		"sunset": 1721213555
+	},
+	"timezone": 32400,
+	"id": 1835848,
+	"name": "Hwagok-dong",
+	"cod": 200
+}
