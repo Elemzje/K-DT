@@ -1,0 +1,56 @@
+{
+	"documents": [
+		{
+			"address_name": "서울 강서구 화곡동 1114-25",
+			"category_group_code": "FD6",
+			"category_group_name": "음식점",
+			"category_name": "음식점 \u003e 한식",
+			"distance": "205",
+			"id": "20741088",
+			"phone": "",
+			"place_name": "우리밥집",
+			"place_url": "http://place.map.kakao.com/20741088",
+			"road_address_name": "서울 강서구 까치산로 193-13",
+			"x": "126.853840884686",
+			"y": "37.55443706309"
+		},
+		{
+			"address_name": "서울 강서구 화곡동 1131-21",
+			"category_group_code": "FD6",
+			"category_group_name": "음식점",
+			"category_name": "음식점 \u003e 한식",
+			"distance": "395",
+			"id": "16852572",
+			"phone": "",
+			"place_name": "소문난밥집",
+			"place_url": "http://place.map.kakao.com/16852572",
+			"road_address_name": "서울 강서구 까치산로 172",
+			"x": "126.853432688416",
+			"y": "37.5525228390797"
+		},
+		{
+			"address_name": "서울 강서구 등촌동 638-3",
+			"category_group_code": "FD6",
+			"category_group_name": "음식점",
+			"category_name": "음식점 \u003e 한식",
+			"distance": "531",
+			"id": "570259562",
+			"phone": "02-6961-5799",
+			"place_name": "안친한언니들밥집",
+			"place_url": "http://place.map.kakao.com/570259562",
+			"road_address_name": "서울 강서구 화곡로68길 82",
+			"x": "126.858439101624",
+			"y": "37.5574024402156"
+		}
+	],
+	"meta": {
+		"is_end": true,
+		"pageable_count": 3,
+		"same_name": {
+			"keyword": "밥집",
+			"region": [],
+			"selected_region": ""
+		},
+		"total_count": 3
+	}
+}
